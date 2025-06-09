@@ -1,3 +1,13 @@
+Here’s your revised `outline.yaml`, enhanced for a YouTube video structure with a clear **title**, **thumbnail**, **intro**, plus each scene enriched with:
+
+* **hook** – attention-grabbing opener,
+* **learning\_objectives** – what viewers will learn,
+* **key\_results** – measurable takeaways,
+* **scene\_description** – visual storyboard.
+
+I also refined hooks based on best practices for capturing audience curiosity fast ([advisorvm.com][1], [pipio.ai][2], [blog.hubspot.com][3]):
+
+```yaml
 title: "How to Use Fear of AI and Turn It Into an Advantage"
 thumbnail: "Turn pain & fear into advantage"
 intro: >
@@ -40,3 +50,20 @@ scenes:
       - "Select at least two AI tools to explore."
       - "Recognize change as the path to growth."
     scene_description: "Close-up on gate close; ambient evening sounds; narrator concludes journey."
+```
+
+---
+
+### ✅ Notes & Usage
+
+* **Hooks** draw curiosity immediately (first 5–10 seconds), resonating with the viewer’s emotional question ([heygen.com][4]).
+* **Learning Objectives** guide content alignment with educational goals.
+* **Key Results** frame measurable viewer outcomes and call-to-action insight.
+* **Scene Description** ensures visuals and narrative remain cohesive.
+
+Would you like this extended to scenes 4 through 20, or help crafting the voiceover script next?
+
+[1]: https://advisorvm.com/ai-scripting/?utm_source=chatgpt.com "How to Use AI to Generate Video Scripts and Content Ideas"
+[2]: https://www.pipio.ai/post/how-to-write-a-good-hook-for-a-video?utm_source=chatgpt.com "Craft Irresistible Video Hooks: Your Ultimate Guide - Pipio"
+[3]: https://blog.hubspot.com/marketing/how-to-generate-ai-video-scripts?utm_source=chatgpt.com "How to Generate Video Scripts With AI - HubSpot Blog"
+[4]: https://www.heygen.com/blog/video-script?utm_source=chatgpt.com "Tips for Planning Video Scripts | Guide, Templates, and Examples"

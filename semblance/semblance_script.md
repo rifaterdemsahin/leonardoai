@@ -1,3 +1,6 @@
+Here’s your refined `script.yaml`, reflecting a 10-minute video and grounded in your outline—offering a polished, structured voiceover for YouTube:
+
+```yaml
 title: "How to Use Fear of AI and Turn It Into an Advantage"
 intro: |
   [Hook] "What if your very first thought about AI could become your greatest opportunity?"
@@ -48,3 +51,21 @@ scenes:
         2. Commit to exploring one AI tool this week,
         3. Share your next courageous step.
       Thank you for joining me. If you're ready to take AI by the hand, subscribe and let's go further—together.
+```
+
+---
+
+### 🧠 How It Maps to Scenes
+
+* **Scene 01–03**: You’ve got hooks, objectives, and key results woven into the voiceover—a tight \~300 words across 90 seconds, pacing the 10-minute runtime.
+* **Scene 20**: Provides conclusion, wrap-up of objectives and key results, and clear CTAs for engagement—ideal for a lasting impression.
+
+### 🎙️ Script Tips
+
+* **Pace**: Aim for \~130–150 wpm—your script above spans roughly 450–500 words, giving room for scenes 4–19 plus pauses, B‑roll, and visuals.
+* **Visual Calls**: Use brackets to indicate where B‑roll, scene transitions, or text overlays should appear.
+* **Warm & Conversational Tone**: Keeps your authentic voice present while staying tight and structured ([podcastle.ai][1]).
+
+Let me know if you'd like me to film‑ready this for all intermediate scenes or adjust pacing/audio cues!
+
+[1]: https://podcastle.ai/blog/how-to-write-a-script-for-a-youtube-video/?utm_source=chatgpt.com "How to Write a Script for a YouTube Video: Full Guide - Podcastle"
