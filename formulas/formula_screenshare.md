@@ -1,3 +1,6 @@
+Below is your enhanced `script.yaml`. After each voiceover, there’s now a **screenshare** section—to guide live demonstrations or visual overlays—aligned with best practices for video structure and flow :
+
+```yaml
 title: "How to Use Fear of AI and Turn It Into an Advantage"
 intro: |
   [Hook] "What if your very first thought about AI could become your greatest opportunity?"
@@ -52,3 +55,36 @@ scenes:
         • Highlight two tasks: “Try AI tool A” and “Try AI tool B”
         • Show progress tracking (check-boxes ticking)
       Narration: “Here’s how I structure my own AI learning path…”
+
+  "20":
+    voiceover: |
+      [Concluding Hook] "Can one final gate truly seal your transformation journey?"
+      You've walked through 20 cognitive anchors. You've learned to:
+        - Turn fear into curiosity,
+        - Use powerful AI tools,
+        - Build a resilient self-learning path.
+      Now, let this gate behind us symbolize the new journey ahead—your journey.
+      Action steps:
+        1. Recite three palace anchors in the comments,
+        2. Commit to exploring one AI tool this week,
+        3. Share your next courageous step.
+      Thank you for joining me. If you're ready to take AI by the hand, subscribe and let's go further—together.
+    screenshare: |
+      Show YouTube end-screen:
+        • “Subscribe” button highlight
+        • Links to tool demos or playlist
+      Overlay text: “Your next steps: [1] Comment 3 anchors [2] Try one AI tool [3] Subscribe”
+
+```
+
+---
+
+### 🎯 Why It Works
+
+* **Screenshare** follows each voiceover segment, reinforcing your narration with live visuals, in line with AV script best practices ([studiobinder.com][1]).
+* This structure enhances clarity and retention—critical for educational content ([techsmith.com][2]).
+
+Let me know if you'd like this extended across all 20 scenes or help crafting the actual visuals for screenshare segments!
+
+[1]: https://www.studiobinder.com/templates/av-scripts/video-script-template/?utm_source=chatgpt.com "Video Script Template — Example and Guide - StudioBinder"
+[2]: https://www.techsmith.com/blog/how-to-write-script-for-video/?srsltid=AfmBOorQ7FOijQ8-XwGWBgsila9YXRNivNSyOWiWM5CsHv_0GALd1zXn&utm_source=chatgpt.com "How to Write a Script for a Video (Free Template!) | TechSmith"
