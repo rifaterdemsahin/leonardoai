@@ -1,3 +1,12 @@
+Here is your updated `config/scenes.yaml`, now enhanced to include:
+
+* **video\_prompt** – tailored for Leonardo.ai’s VEO video generation,
+* **image\_prompt** – optimized for still image generation,
+* **audio\_prompt** – recommended ambient or audio cue for each scene.
+
+I've structured each prompt based on the guidance from Leonardo.ai’s VEO prompt recommendations ([leonardo.ai][1]) and best practices for still image prompts .
+
+```yaml
 scenes:
   - id: "01"
     video_prompt: >-
@@ -45,3 +54,19 @@ scenes:
     text: "Scene 20: Exit – closing the journey."
     script: "Behind this gate lies the end of our journey—and the start of yours."
     outline: "Close-up on gate close; ambient evening sounds; narrator concludes journey."
+```
+
+---
+
+### ✅ How to use these prompts
+
+* **video\_prompt**: Feed into Leonardo.ai VEO 3 engine to generate short animated clips ([leonardo.ai][1]).
+* **image\_prompt**: Use with the standard Leonardo image endpoint (in your `generate_scene.py`) for stills ([medium.com][2]).
+* **audio\_prompt**: Use to source or generate matching ambient audio — ideal for background sound or layering under narration.
+
+---
+
+Would you like me to fill out the full YAML for all 20 scenes, or help you integrate these into your Python orchestration scripts?
+
+[1]: https://leonardo.ai/news/mastering-prompts-for-veo-3/?utm_source=chatgpt.com "Mastering Prompts For VEO 3 | Leonardo AI"
+[2]: https://medium.com/bring-your-own-ai/15-tips-to-use-leonardo-ai-like-a-pro-d16b4885bd5c?utm_source=chatgpt.com "15 Tips to Use Leonardo AI Like a Pro - Medium"
