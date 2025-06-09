@@ -1,6 +1,20 @@
 scenes:
-  - prompt: "A cozy front door evening scene, memory palace - entrance"
+  - id: "01"
+    prompt: "Cinematic entrance, wooden front door with engraved details, early morning light, warm glow through doorway, photorealistic, ultra‑detailed"
     text: "Scene 1: Entrance – recall the opening gateway."
-  - prompt: "Warm living room with soft lighting, memory palace – living room"
+    script: "Welcome to our journey. This door marks the beginning of your exploration."
+    outline: "Wide shot of the entrance; soft morning sunlight; narrator introduces the path ahead."
+
+  - id: "02"
+    prompt: "Cozy living room, plush sofa and fireplace, soft afternoon sunlight, warm tones, digital painting, cinematic composition"
     text: "Scene 2: Living Room – where memories gather."
-  # Continue through scene 20...
+    script: "Step inside—here, warmth and comfort cradle every thought."
+    outline: "Cut to living room; fire crackles; narrator evokes nostalgia."
+
+# ... repeat for scenes 3 through 19
+
+  - id: "20"
+    prompt: "Old wooden garden gate, climbing vines, golden hour backlight, sense of exit or conclusion, cinematic composition, ultra‑detailed"
+    text: "Scene 20: Exit – closing the journey."
+    script: "Behind this gate lies the end of our journey—and the start of yours."
+    outline: "Close-up on gate close; ambient evening sounds; narrator concludes journey."
