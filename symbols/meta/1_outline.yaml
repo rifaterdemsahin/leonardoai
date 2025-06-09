@@ -1,9 +1,9 @@
 outline:
+  "title" : "how to use fear of ai to turn into an advantage"
+  "thunbnail" : "turn fear into an advantage"
   "01":
     hook: "What if the very first doorway you see could unlock deeper memory paths?"
     learning_objectives:
-      - "Recognise the importance of initial mental anchors."
-      - "Learn how setting a strong entry point boosts memory."
       - "Understand how to prime the brain with visual cues."
     key_results:
       - "Audience recalls the entrance vividly after video."
@@ -13,20 +13,15 @@ outline:
   "02":
     hook: "Ever wondered how the warmth of your living room can evoke a memory cascade?"
     learning_objectives:
-      - "Identify how emotional context aids memory encoding."
-      - "See the link between familiar spaces and recall speed."
       - "Apply ambient cues to strengthen memory ties."
     key_results:
       - "Audience feels emotional connection to the memory space."
       - "Learners use a personal emotional cue in their own palace."
       - "Comments contain at least one memory triggered by a cozy environment."
     scene_description: "Cut to living room; fire crackles; narrator evokes nostalgia."
-  # Repeat similarly for scenes 03 through 19...
-  "20":
+  "03":
     hook: "Can one final gate truly seal your journey and cement your memory palace?"
     learning_objectives:
-      - "Grasp the concept of closure in mnemonic journeys."
-      - "Understand how exit points reinforce memory review."
       - "Learn to design ending anchors for retrieval stability."
     key_results:
       - "Viewers can recite at least 3 palace anchors after finishing."
