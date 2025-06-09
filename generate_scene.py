@@ -1,30 +1,37 @@
-import argparse
-import yaml
+import argparse, yaml, os, time
 from moviepy.editor import *
+from leonardo_api import Leonardo
+
+API_TOKEN = os.getenv("LEONARDO_API_KEY")
+leonardo = Leonardo(auth_token=API_TOKEN)
 
 def generate_scene(scene_number, config_path):
-    # Load scene configuration
-    with open(config_path, 'r') as file:
-        config = yaml.safe_load(file)
-    scene_config = config['scenes'][int(scene_number) - 1]
-
-    # Create background clip
-    background = ImageClip(f"assets/images/{scene_config['background']}").set_duration(30)
-
-    # Add text overlay
-    txt_clip = TextClip(scene_config['text'], fontsize=24, color='white')
-    txt_clip = txt_clip.set_position('center').set_duration(30)
-
-    # Combine background and text
-    final_clip = CompositeVideoClip([background, txt_clip])
-
-    # Write the scene to file
-    output_path = f"scenes/scene_{scene_number}/scene_{scene_number}.mp4"
-    final_clip.write_videofile(output_path, fps=24)
+    with open(config_path) as f:
+        config = yaml.safe_load(f)['scenes'][int(scene_number)-1]
+    prompt, text = config['prompt'], config['text']
+    # Trigger image generation
+    resp = leonardo.post_generations(prompt=prompt, num_images=1,
+                                     model_id='e316348f-7773-490e-adcd-46757c738eb7',
+                                     width=1024, height=512, guidance_scale=7)
+    gen_id = resp['sdGenerationJob']['generationId']
+    img = leonardo.wait_for_image_generation(generation_id=gen_id)[0]
+    url = img['url']
+    # Save downloaded image
+    scene_dir = f"scenes/scene_{scene_number.zfill(2)}"
+    os.makedirs(scene_dir, exist_ok=True)
+    img_path = os.path.join(scene_dir, "bg.png")
+    with open(img_path, 'wb') as out:
+        out.write(requests.get(url).content)
+    # Create video clip with text overlay
+    bg = ImageClip(img_path).set_duration(30)
+    txt = TextClip(text, fontsize=48, color='white', font='Arial-Bold')
+    txt = txt.set_position('center').set_duration(30)
+    clip = CompositeVideoClip([bg, txt])
+    clip.write_videofile(os.path.join(scene_dir, "scene.mp4"), fps=24)
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--scene', required=True, help='Scene number to generate')
-    parser.add_argument('--config', required=True, help='Path to scenes configuration file')
-    args = parser.parse_args()
+    p = argparse.ArgumentParser()
+    p.add_argument('--scene', required=True)
+    p.add_argument('--config', required=True)
+    args = p.parse_args()
     generate_scene(args.scene, args.config)

@@ -1,0 +1,158 @@
+Here's your updated framework, now integrating the **Leonardo.ai API** using their Python SDK to dynamically generate your scene images. You'll still create a 10-minute video with clips every 30 seconds—20 scenes total—anchored in a Memory Palace technique.
+
+---
+
+## 🧩 Project Structure
+
+```
+memory_palace_video/
+├── assets/
+│   └── audio/               # Music or narration (no manual images now)
+├── scenes/
+│   └── scene_{01..20}/      # Each scene's assets and video clip
+├── scripts/
+│   ├── generate_scene.py    # Generates images + video clip per scene
+│   └── compile_video.py     # Concatenates all scene clips
+├── config/
+│   └── scenes.yaml          # Scene prompts & memory palace mapping
+├── requirements.txt
+└── run.sh                   # Bash automation
+```
+
+---
+
+## 📦 Requirements
+
+**requirements.txt**
+
+```txt
+moviepy
+PyYAML
+leonardo-api
+```
+
+Install with:
+
+```bash
+pip install -r requirements.txt
+```
+
+The `leonardo-api` package wraps the official SDK ([pypi.org][1]).
+
+---
+
+## 🧠 scenes.yaml
+
+```yaml
+scenes:
+  - prompt: "A cozy front door evening scene, memory palace - entrance"
+    text: "Scene 1: Entrance – recall the opening gateway."
+  - prompt: "Warm living room with soft lighting, memory palace – living room"
+    text: "Scene 2: Living Room – where memories gather."
+  # Continue through scene 20...
+```
+
+---
+
+## 🪄 generate\_scene.py
+
+```python
+import argparse, yaml, os, time
+from moviepy.editor import *
+from leonardo_api import Leonardo
+
+API_TOKEN = os.getenv("LEONARDO_API_KEY")
+leonardo = Leonardo(auth_token=API_TOKEN)
+
+def generate_scene(scene_number, config_path):
+    with open(config_path) as f:
+        config = yaml.safe_load(f)['scenes'][int(scene_number)-1]
+    prompt, text = config['prompt'], config['text']
+    # Trigger image generation
+    resp = leonardo.post_generations(prompt=prompt, num_images=1,
+                                     model_id='e316348f-7773-490e-adcd-46757c738eb7',
+                                     width=1024, height=512, guidance_scale=7)
+    gen_id = resp['sdGenerationJob']['generationId']
+    img = leonardo.wait_for_image_generation(generation_id=gen_id)[0]
+    url = img['url']
+    # Save downloaded image
+    scene_dir = f"scenes/scene_{scene_number.zfill(2)}"
+    os.makedirs(scene_dir, exist_ok=True)
+    img_path = os.path.join(scene_dir, "bg.png")
+    with open(img_path, 'wb') as out:
+        out.write(requests.get(url).content)
+    # Create video clip with text overlay
+    bg = ImageClip(img_path).set_duration(30)
+    txt = TextClip(text, fontsize=48, color='white', font='Arial-Bold')
+    txt = txt.set_position('center').set_duration(30)
+    clip = CompositeVideoClip([bg, txt])
+    clip.write_videofile(os.path.join(scene_dir, "scene.mp4"), fps=24)
+
+if __name__ == "__main__":
+    p = argparse.ArgumentParser()
+    p.add_argument('--scene', required=True)
+    p.add_argument('--config', required=True)
+    args = p.parse_args()
+    generate_scene(args.scene, args.config)
+```
+
+---
+
+## 🎬 compile\_video.py
+
+```python
+import argparse, os
+from moviepy.editor import VideoFileClip, concatenate_videoclips
+
+def compile_video(input_dir, output_path):
+    clips = []
+    for i in range(1, 21):
+        sn = f"{i:02d}"
+        clips.append(VideoFileClip(os.path.join(input_dir, f"scene_{sn}", "scene.mp4")))
+    final = concatenate_videoclips(clips, method="compose")
+    final.write_videofile(output_path, fps=24)
+
+if __name__ == "__main__":
+    p = argparse.ArgumentParser()
+    p.add_argument('--input_dir', required=True)
+    p.add_argument('--output', required=True)
+    args = p.parse_args()
+    compile_video(args.input_dir, args.output)
+```
+
+---
+
+## 🔄 run.sh
+
+```bash
+#!/bin/bash
+:contentReference[oaicite:3]{index=3}
+
+:contentReference[oaicite:4]{index=4}
+
+:contentReference[oaicite:5]{index=5}
+  :contentReference[oaicite:6]{index=6}
+done
+
+:contentReference[oaicite:7]{index=7}
+```
+
+Make executable with:
+
+```bash
+chmod +x run.sh
+```
+
+---
+
+## ✅ Summary
+
+* **Image generation**: uses Leonardo.ai SDK for each memory-palace scene .
+* **Video creation**: `moviepy` composes background + text into 30-second clips.
+* **Compilation**: final video stitches 20 clips into a 10-minute video.
+
+---
+
+Feel free to personalize prompts, models, or guidance settings! If you want webhook callbacks, multi-variation images, or video-with-motion generation using Leonardo.ai, I can help tweak the scripts.
+
+[1]: https://pypi.org/project/leonardo-api/?utm_source=chatgpt.com "leonardo-api - PyPI"

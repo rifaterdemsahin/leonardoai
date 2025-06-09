@@ -1,6 +1,6 @@
 scenes:
-  - background: front_door.jpg
-    text: "Welcome to the journey through the Memory Palace."
-  - background: living_room.jpg
-    text: "This is the living room, where ideas come to life."
-  # Add entries for scenes 3 through 20
+  - prompt: "A cozy front door evening scene, memory palace - entrance"
+    text: "Scene 1: Entrance – recall the opening gateway."
+  - prompt: "Warm living room with soft lighting, memory palace – living room"
+    text: "Scene 2: Living Room – where memories gather."
+  # Continue through scene 20...
