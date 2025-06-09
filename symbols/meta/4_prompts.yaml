@@ -1,0 +1,88 @@
+title: "How to Use Fear of AI and Turn It Into an Advantage"
+intro: |
+  [Hook] "What if your very first thought about AI could become your greatest opportunity?"
+  [Intro] Hello, I'm Rifat Erdem Sahin—a DevOps contractor turned AI Solutions Architect.
+  Today, we're transforming fear of AI into power, and in the next 10 minutes, you'll learn how to turn uncertainty into your superpower. Let’s dive in.
+
+scenes:
+  "01":
+    image_prompt: >-
+      Cinematic entrance, wooden front door with engraved details, early morning light,
+      warm glow through doorway, photorealistic sharp edges, ultra‑detailed.
+    video_prompt: >-
+      Scene description: Doorway opening at dawn.
+      Visual style: Cinematic photorealism.
+      Camera movement: Slow static reveal.
+      Main subject: Wooden door with ornate carvings.
+      Background: Soft dawn mist, fresh green moss.
+      Mood: Warm, hopeful.
+    audio_prompt: >-
+      Generate ambient soundscape: gentle bird calls, distant footsteps on stone.
+    text: "Scene 1: Entrance – recall the opening gateway."
+    voiceover: |
+      [Hook] "What if your very first thought about AI could become your greatest opportunity?"
+      Remember: fear signals growth...
+    screenshare: |
+      Show timeline slide: Industrial → Tech Revolution...
+  
+  "02":
+    image_prompt: >-
+      Cozy living room, plush sofa beside fireplace, soft afternoon sunlight,
+      warm tones, photorealistic, high saturation, subtle shadows.
+    video_prompt: >-
+      Scene description: Interior living room with focus on fire.
+      Visual style: Digital painting with cinematic lighting.
+      Camera movement: Slow dolly‑in centered on fire.
+      Main subject: Fireplace glowing warmly.
+      Background: Decorative mantel with family photos.
+      Mood: Nostalgic, comforting.
+    audio_prompt: >-
+      Generate ambient: crackling fire, soft piano chords.
+    text: "Scene 2: Living Room – where memories gather."
+    voiceover: |
+      [Hook] "What can you gain by embracing AI tools today?"
+      Let’s step inside the warmth...
+    screenshare: |
+      Showcase AI tool demos: audio-gen, image-gen, ChatGPT formula...
+
+  "03":
+    image_prompt: >-
+      Modern workspace kitchen‑table hybrid, steaming kettle and laptop, golden hour light,
+      warm shadows, photorealistic, ultra‑detailed.
+    video_prompt: >-
+      Scene description: Kitchen table staging work area.
+      Visual style: Cinematic photorealism.
+      Camera movement: Slow pan from kettle to laptop.
+      Main subject: Steam rising from kettle.
+      Background: Laptop with open IDE.
+      Mood: Reflective, purposeful.
+    audio_prompt: >-
+      Generate ambient: gentle kettle whistling, soft typing sounds.
+    text: "Scene 3: Kitchen – where ideas simmer."
+    voiceover: |
+      [Hook] "Can your career pivot smoothly onto the AI bandwagon?"
+      With over a decade in DevOps...
+    screenshare: |
+      Open learning board in Trello/Notion showing two AI-tool tasks and progress tracking
+
+  # …Continue pattern for scenes 04–19 …
+
+  "20":
+    image_prompt: >-
+      Old wooden garden gate closing at golden hour, climbing vines, backlit warm glow,
+      photorealistic, high contrast, cinematic composition.
+    video_prompt: >-
+      Scene description: Gate closing in dusk light.
+      Visual style: Cinematic photorealism.
+      Camera movement: Slow push–in toward gate.
+      Main subject: Gate latch and vines.
+      Background: Fading sunset sky.
+      Mood: Poignant, conclusive.
+    audio_prompt: >-
+      Generate ambient: evening crickets, soft creaking gate.
+    text: "Scene 20: Exit – closing the journey."
+    voiceover: |
+      [Concluding Hook] "Can one final gate truly seal your transformation journey?"
+      You've walked through...
+    screenshare: |
+      Show YouTube end‑screen with subscribe/next actions

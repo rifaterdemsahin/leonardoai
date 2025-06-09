@@ -1,0 +1,18 @@
+scenes:
+  - scriptid: "01"
+    outlineid: "Wide shot of the entrance; soft morning sunlight; narrator introduces the path ahead."
+    loci_item: "Giant key turning in the lock, glowing gold"
+
+  - scriptid: "02"
+    outlineid: "Cut to living room; fire crackles; narrator evokes nostalgia."
+    loci_item: "Oversized glowing book on the sofa armrest"
+
+  - scriptid: "03"
+    outlineid: "Pan across kettle and laptop; narrator introduces self-learning path."
+    loci_item: "Laptop screen showing AI logo next to kettle steaming"
+
+  # ...continue similarly through scenes 04–19...
+
+  - scriptid: "20"
+    outlineid: "Close-up on gate close; ambient evening sounds; narrator concludes journey."
+    loci_item: "Brass plaque on the gate etched with your name"

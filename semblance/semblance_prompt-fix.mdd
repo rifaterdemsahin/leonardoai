@@ -1,0 +1,84 @@
+Here are your updated scene prompts—now precisely aligned with the **script** and fleshed out for **image**, **video**, and **audio** generation using Leonardo.ai and ambient sound tools. I’ve followed Leonardo.ai’s recommended structure for everything (scene description, style, camera movement, subjects, background, mood, and optional audio cues) ([leonardo.ai][1]).
+
+```yaml
+scenes:
+  - id: "01"
+    image_prompt: >-
+      Cinematic entrance, wooden front door with engraved details, early morning light,
+      warm glow through doorway, close-up reveal, photorealistic, ultra-detailed.
+    video_prompt: >-
+      Scene description: Front door at dawn.
+      Visual style: Cinematic photorealism.
+      Camera movement: Slow static reveal.
+      Main subject: Wooden door, engraved details.
+      Background setting: Subtle moss and early morning light.
+      Lighting/mood: Warm, inviting.
+      Audio cue: Gentle birdsong and soft footsteps.
+    audio_prompt: >-
+      Generate ambient: soft birdsong, distant footsteps, calm dawn atmosphere.
+    text: "Scene 1: Entrance – recall the opening gateway."
+
+  - id: "02"
+    image_prompt: >-
+      Cozy living room, plush sofa and fireplace, soft afternoon sunlight,
+      warm tones, medium shot, digital painting.
+    video_prompt: >-
+      Scene description: Living room with fireplace.
+      Visual style: Cinematic digital painting.
+      Camera movement: Slow dolly-in.
+      Main subject: Sofa and glowing fire.
+      Background setting: Mantel, decorative details.
+      Lighting/mood: Warm, nostalgic.
+      Audio cue: Fire crackling, soft piano note.
+    audio_prompt: >-
+      Generate ambient: crackling fire, soft piano underscore.
+    text: "Scene 2: Living Room – where memories gather."
+
+  - id: "03"
+    image_prompt: >-
+      Modern kitchen, steaming kettle on stove, golden hour light,
+      gentle shadows, photorealistic, high resolution.
+    video_prompt: >-
+      Scene description: Kitchen during golden hour.
+      Visual style: Photorealistic cinematic.
+      Camera movement: Slow pan from kettle to counter.
+      Main subject: Kettle releasing steam.
+      Background setting: Countertop, backsplash details.
+      Lighting/mood: Warm, thoughtful.
+      Audio cue: Soft kettle whistle and ambient kitchen hum.
+    audio_prompt: >-
+      Generate ambient: soft kettle whistle, gentle kitchen ambience.
+    text: "Scene 3: Kitchen – where ideas simmer."
+
+  # ... scenes 04–19 would follow pattern …
+
+  - id: "20"
+    image_prompt: >-
+      Old wooden garden gate, climbing vines, golden hour backlight,
+      cinematic composition, ultra-detailed, photorealistic.
+    video_prompt: >-
+      Scene description: Garden gate closing at golden hour.
+      Visual style: Cinematic photorealism.
+      Camera movement: Slow push-in.
+      Main subject: Wooden gate with vines.
+      Background setting: Sunset through foliage.
+      Lighting/mood: Poignant, concluding warmth.
+      Audio cue: Distant evening crickets, gentle gate creak.
+    audio_prompt: >-
+      Generate ambient: soft crickets, creaking gate, peaceful dusk.
+    text: "Scene 20: Exit – closing the journey."
+```
+
+---
+
+### 🎯 How to Integrate
+
+* **Image prompts**: Supply to `leonardo.post_generations` for still backgrounds in `generate_scene.py`.
+* **Video prompts**: Use with Leonardo’s VEO (Motion 2.0) endpoint for animated clips—just add `"promptEnhance": true` and `"frameInterpolation": true` ([docs.leonardo.ai][2]).
+* **Audio prompts**: Feed into any AI ambient audio tool (e.g., TopMediai or Mubert) to generate background ambience ([topmediai.com][3]).
+
+This setup ensures each scene is cohesive across visuals, motion, and sound, tightly matching your scripted narrative. Let me know if you'd like me to generate the full YAML for all 20 scenes or fine-tune any part!
+
+[1]: https://leonardo.ai/news/mastering-prompts-for-veo-3/?utm_source=chatgpt.com "Mastering Prompts For VEO 3 | Leonardo AI"
+[2]: https://docs.leonardo.ai/docs/generate-video-using-text-prompts?utm_source=chatgpt.com "Generate with Motion 2.0 Using Text Prompts - Leonardo AI"
+[3]: https://www.topmediai.com/ai-music/ai-ambient-music-generator/?utm_source=chatgpt.com "AI Ambient Music Generator 2025: Free & Royalty-Free - TopMediai"
