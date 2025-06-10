@@ -1,68 +1,34 @@
+subNiche: "Fix your career by using ai where you get self learning tactics"
+flex: "Erdem self learner a migrant who was able to make a million by fixing what was not working"
+
 title: "How to Use Fear of AI and Turn It Into an Advantage"
 thumbnail: "Turn pain & fear into advantage"
+
 format: "10-minute video"
 audience: "people looking to fix their careers"
 presentation_flow: "Tell → Show → Do → Apply"
+
 topic_count: 3
 
 topics:
   - id: 1
     subject: "Fear"
-    description: "Understand how to shift fear of AI into a catalyst for growth."
   - id: 2
     subject: "Gain"
-    description: "Discover and test key AI tools that can enhance your career."
   - id: 3
     subject: "Action Plan"
-    description: "Build a self‑learning roadmap to integrate AI into your professional journey."
 
-objectives_delivery_method:
+delivery_method:
   tell:
-    - "Reframe fear as a signal, not a barrier."
-    - "Explain 3 categories of AI tools."
-    - "Illustrate how to create a personal career roadmap."
+    - "talking head - Green Screen"
+    - "memory place in the background"
   show:
-    - "Visual timeline of Industrial → Tech revolutions."
-    - "Screen‑share demos of an audio AI tool and an image generator."
-    - "Show a Trello/Notion board built with AI learning steps."
+    - "Graphics"
+    - "Objectives"
   do:
-    - "Ask viewers to vocalise one fear they can turn into opportunity."
-    - "Guide them to test one AI tool and comment their experience."
-    - "Lead them to draft the first two steps of their AI learning plan."
+    - "Screenshare tools"
+    - "Key results"
   apply:
-    - "Encourage viewers to implement their 2‑step plan this week."
-    - "Invite sharing of their plan in the comments for peer feedback."
-    - "Prompt viewers to rewatch to reinforce memory anchors."
+    - "Assignments"
+    - "Comments"
 
-key_results:
-  - "Include an engaging hook within the first 15 seconds."
-  - "At least 25% of viewers comment with their chosen AI tool."
-  - "30% of viewers report starting their AI plan within 7 days."
-
-talking_head_segments:
-  - id: 1
-    type: "greenscreen"
-    title: "Introduction & Reframing Fear"
-    duration: "2 minutes"
-  - id: 2
-    type: "greenscreen"
-    title: "Tool Demos"
-    duration: "4 minutes"
-  - id: 3
-    type: "greenscreen"
-    title: "Learning Plan Walkthrough"
-    duration: "3 minutes"
-  - id: 4
-    type: "greenscreen"
-    title: "Conclusion & CTA"
-    duration: "1 minute"
-
-screenshare_segments:
-  - id: "timeline_demo"
-    tool: "Leonardo.ai (visuals)"
-  - id: "audio_tool_demo"
-    tool: "Leonardo.ai (audio‑generation)"
-  - id: "visual_tool_demo"
-    tool: "Leonardo.ai (image generation)"
-  - id: "learning_dashboard"
-    tool: "Trello/Notion"
